@@ -28,10 +28,10 @@ class CommitViewModelController {
                         let json = try JSON(data: response.data!)
 
                         for i in 0...25 {
-                            
+
                             print(json[i])
                             var itemCommitDate = json[i]["commit"]["author"]["date"].string
-                            
+
                             let inputDateFormatter = DateFormatter()
                             inputDateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss'Z'"
                             let date = inputDateFormatter.date(from: itemCommitDate!)
@@ -39,12 +39,12 @@ class CommitViewModelController {
                             let outputDateFormatter = DateFormatter()
                             outputDateFormatter.dateFormat = "yyyy-dd-mm HH:mm"
                             itemCommitDate = outputDateFormatter.string(from: date!)
-                            
+
                             let itemCommitAuthor = json[i]["commit"]["author"]["name"].string
-                            
+
                             let itemCommitMessage = json[i]["commit"]["message"].string
 
-                            let itemGotten = CommitModel(itemCommitMessage: itemCommitMessage!, itemCommitDate: itemCommitDate!)
+                            let itemGotten = CommitModel(itemCommitMessage: itemCommitMessage!, itemCommitDate: itemCommitDate!, itemCommitAuthor: itemCommitAuthor!)
 
                             commitModel.append(itemGotten)
                         }
@@ -66,7 +66,25 @@ class CommitViewModelController {
                 }
 
         }
+        
+        
 
+    }
+    
+    func fetchCommitsSearched(_ searchedText: String, completion: @escaping (_ success: Bool) -> ()) {
+            
+        fetchCommits(completion: { (success) in
+            if !success {
+                completion(false)
+                print("error encountered")
+            } else {
+                
+                self.viewModels = self.viewModels.filter({ ($0?.itemCommitAuthor!.lowercased())!.contains(searchedText.lowercased()) })
+                
+    
+                completion(true)
+            }
+        })
     }
 
     var viewModelsCount: Int {
@@ -91,3 +109,4 @@ class CommitViewModelController {
 
 
 }
+

@@ -30,7 +30,7 @@
                             <constraint firstAttribute="height" constant="50" id="Wy1-RT-rnA"/>
                             <constraint firstAttribute="width" constant="372" id="ymc-B8-hz0"/>
                         </constraints>
-                        <fontDescription key="fontDescription" name="NotoSansMyanmar-Light" family="Noto Sans Myanmar" pointSize="16"/>
+                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                         <userDefinedRuntimeAttributes>
@@ -40,13 +40,20 @@
                         </userDefinedRuntimeAttributes>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="22/02/07 " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="okX-Bt-j1g">
-                        <rect key="frame" x="348.5" y="49" width="58.5" height="31"/>
-                        <fontDescription key="fontDescription" name="NotoSansMyanmar-Regular" family="Noto Sans Myanmar" pointSize="14"/>
+                        <rect key="frame" x="357" y="53.5" width="50" height="26.5"/>
+                        <fontDescription key="fontDescription" name="NotoSansMyanmar-Regular" family="Noto Sans Myanmar" pointSize="12"/>
+                        <color key="textColor" red="0.29405295850000002" green="0.33355444670000001" blue="0.37225496769999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Author: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2MI-SZ-SuK">
+                        <rect key="frame" x="51.5" y="53.5" width="42" height="26.5"/>
+                        <fontDescription key="fontDescription" name="NotoSansMyanmar-Regular" family="Noto Sans Myanmar" pointSize="12"/>
                         <color key="textColor" red="0.29405295850000002" green="0.33355444670000001" blue="0.37225496769999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
+                    <constraint firstAttribute="bottom" secondItem="2MI-SZ-SuK" secondAttribute="bottom" id="IaO-mP-cKo"/>
                     <constraint firstItem="uMM-Te-tay" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="NRw-kZ-FgH"/>
                     <constraint firstAttribute="trailing" secondItem="okX-Bt-j1g" secondAttribute="trailing" constant="7" id="Ntn-s3-DCM"/>
                     <constraint firstItem="pa2-U1-gFf" firstAttribute="leading" secondItem="uMM-Te-tay" secondAttribute="trailing" constant="8" id="UKT-mh-jXV"/>
@@ -54,10 +61,12 @@
                     <constraint firstItem="uMM-Te-tay" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="4" id="bpW-s3-NVH"/>
                     <constraint firstAttribute="bottom" secondItem="okX-Bt-j1g" secondAttribute="bottom" id="dgK-El-eJd"/>
                     <constraint firstAttribute="trailing" secondItem="pa2-U1-gFf" secondAttribute="trailing" id="gyj-Cg-5Ti"/>
+                    <constraint firstItem="2MI-SZ-SuK" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="51.5" id="lQG-I2-4fh"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="commitAuthor" destination="2MI-SZ-SuK" id="5gD-Lo-Ssa"/>
                 <outlet property="commitDate" destination="okX-Bt-j1g" id="Oin-OE-bu3"/>
                 <outlet property="commitMessage" destination="pa2-U1-gFf" id="hg1-7j-DGT"/>
             </connections>

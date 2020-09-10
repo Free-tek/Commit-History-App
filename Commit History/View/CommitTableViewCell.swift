@@ -12,6 +12,7 @@ class CommitTableViewCell: UITableViewCell {
 
     @IBOutlet weak var commitMessage: UILabel!
     @IBOutlet weak var commitDate: UILabel!
+    @IBOutlet weak var commitAuthor: UILabel!
     
     static let cellIdentifier = "CommitTableViewCell"
     
@@ -41,6 +42,7 @@ class CommitTableViewCell: UITableViewCell {
 
         commitMessage.text = viewModel.itemCommitMessage
         commitDate.text = viewModel.itemCommitDate
+        commitAuthor.text = viewModel.itemCommitAuthor
     }
 }
 

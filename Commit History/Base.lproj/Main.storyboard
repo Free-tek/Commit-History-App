@@ -20,17 +20,30 @@
                                 <color key="color" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </activityIndicatorView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zFS-NI-Bsx">
-                                <rect key="frame" x="0.0" y="43" width="414" height="853"/>
+                                <rect key="frame" x="0.0" y="92" width="414" height="804"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="414" id="ScO-60-kXc"/>
-                                    <constraint firstAttribute="height" constant="853" id="Xoc-zl-wSY"/>
+                                    <constraint firstAttribute="height" constant="804" id="Xoc-zl-wSY"/>
                                 </constraints>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="8La-ls-wuL"/>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="3Ql-Fe-UBS"/>
                                 </connections>
                             </tableView>
+                            <searchBar contentMode="redraw" placeholder="Search commit by Author" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pvr-Yt-DPs">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="Iap-FM-bHd"/>
+                                    <constraint firstAttribute="width" constant="414" id="d5m-5B-7is"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="iuI-Mf-AJx"/>
+                                </connections>
+                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -38,14 +51,18 @@
                             <constraint firstItem="zFS-NI-Bsx" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="NnV-GX-Sid"/>
                             <constraint firstItem="MNx-8k-KBj" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="RUM-TU-gCq"/>
                             <constraint firstItem="MNx-8k-KBj" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="TXh-fg-w7f"/>
-                            <constraint firstItem="zFS-NI-Bsx" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="43" id="fA9-fA-Ua5"/>
+                            <constraint firstItem="pvr-Yt-DPs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="cgG-TW-hY5"/>
+                            <constraint firstItem="zFS-NI-Bsx" firstAttribute="top" secondItem="pvr-Yt-DPs" secondAttribute="bottom" constant="4" id="e85-3Z-SqC"/>
                             <constraint firstItem="zFS-NI-Bsx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="gu3-SK-73m"/>
+                            <constraint firstItem="pvr-Yt-DPs" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="m3u-Re-7Ys"/>
+                            <constraint firstItem="pvr-Yt-DPs" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="yfK-Tf-c6W"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="activityIndicator" destination="MNx-8k-KBj" id="yGD-Rh-XMl"/>
                         <outlet property="commitTableView" destination="zFS-NI-Bsx" id="dgx-Kh-sJi"/>
+                        <outlet property="searchBar" destination="pvr-Yt-DPs" id="vMs-Tn-f9r"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

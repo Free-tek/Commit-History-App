@@ -10,11 +10,13 @@ import Foundation
 struct CommitViewModel {
     let itemCommitMessage: String?
     let itemCommitDate: String?
+    let itemCommitAuthor: String?
 
 
     init(commitItem: CommitModel) {
         self.itemCommitMessage = commitItem.itemCommitMessage
         self.itemCommitDate = commitItem.itemCommitDate
+        self.itemCommitAuthor = commitItem.itemCommitAuthor
     }
 
 }
