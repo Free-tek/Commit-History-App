@@ -1,0 +1,24 @@
+PODS:
+  - Alamofire (5.2.2)
+  - BaseAPI (0.1.7)
+  - GithubAPI (0.0.6):
+    - BaseAPI
+
+DEPENDENCIES:
+  - Alamofire
+  - GithubAPI
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - BaseAPI
+    - GithubAPI
+
+SPEC CHECKSUMS:
+  Alamofire: 814429acc853c6c54ff123fc3d2ef66803823ce0
+  BaseAPI: 78f88151221ac5d2dcc2dda69cf3aab6773fd8eb
+  GithubAPI: bc5bfd90489f5138a8d1e00003b18abe31579eb0
+
+PODFILE CHECKSUM: 9c0d511c11cc40e5d27a2427285ed01a3c30acce
+
+COCOAPODS: 1.9.3

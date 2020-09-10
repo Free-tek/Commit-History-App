@@ -1,0 +1,6 @@
+framework module Pods_Commit_History {
+  umbrella header "Pods-Commit History-umbrella.h"
+
+  export *
+  module * { export * }
+}
