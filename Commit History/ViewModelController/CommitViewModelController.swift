@@ -10,7 +10,7 @@ import Foundation
 import Alamofire
 import SwiftyJSON
 
-class TrendsViewModelController {
+class CommitViewModelController {
 
     var viewModels: [CommitViewModel?] = []
 
@@ -27,13 +27,14 @@ class TrendsViewModelController {
                     if response.data != nil {
                         let json = try JSON(data: response.data!)
 
-                        for _ in 0...25 {
-
-                            let itemCommitDate = json["author"]["date"].string
+                        for i in 0...25 {
                             
-                            let itemCommitAuthor = json["author"]["name"].string
+                            print(json[i])
+                            let itemCommitDate = json[i]["commit"]["author"]["date"].string
                             
-                            let itemCommitMessage = json["message"].string
+                            let itemCommitAuthor = json[i]["commit"]["author"]["name"].string
+                            
+                            let itemCommitMessage = json[i]["commit"]["message"].string
 
                             let itemGotten = CommitModel(itemCommitMessage: itemCommitMessage!, itemCommitDate: itemCommitDate!)
 

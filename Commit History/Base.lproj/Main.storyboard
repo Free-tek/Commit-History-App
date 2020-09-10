@@ -15,6 +15,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="MNx-8k-KBj">
+                                <rect key="frame" x="197" y="443" width="20" height="20"/>
+                                <color key="color" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zFS-NI-Bsx">
                                 <rect key="frame" x="0.0" y="43" width="414" height="853"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -22,18 +26,25 @@
                                     <constraint firstAttribute="width" constant="414" id="ScO-60-kXc"/>
                                     <constraint firstAttribute="height" constant="853" id="Xoc-zl-wSY"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="8La-ls-wuL"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="3Ql-Fe-UBS"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="zFS-NI-Bsx" secondAttribute="bottom" id="E8a-AM-cmE"/>
                             <constraint firstItem="zFS-NI-Bsx" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="NnV-GX-Sid"/>
+                            <constraint firstItem="MNx-8k-KBj" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="RUM-TU-gCq"/>
+                            <constraint firstItem="MNx-8k-KBj" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="TXh-fg-w7f"/>
                             <constraint firstItem="zFS-NI-Bsx" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="43" id="fA9-fA-Ua5"/>
                             <constraint firstItem="zFS-NI-Bsx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="gu3-SK-73m"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="MNx-8k-KBj" id="yGD-Rh-XMl"/>
                         <outlet property="commitTableView" destination="zFS-NI-Bsx" id="dgx-Kh-sJi"/>
                     </connections>
                 </viewController>
