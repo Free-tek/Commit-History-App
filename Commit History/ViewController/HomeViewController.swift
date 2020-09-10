@@ -51,6 +51,9 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
 
 
     func setUpElements() {
+        //hide keyboard when  tapped around
+        hideKeyboardWhenTappedAround()
+        
         //remove empty table view cells
         commitTableView.tableFooterView = UIView()
         
