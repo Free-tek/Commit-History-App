@@ -27,9 +27,11 @@ class CommitViewModelController {
                     if response.data != nil {
                         let json = try JSON(data: response.data!)
 
-                        for i in 0...25 {
-
-                            print(json[i])
+                        for i in 0...30 {
+                            //break if commits  are not up to 30
+                            if  "\(json[i]["commit"]["author"])" ==  "null"{
+                                break
+                            }
                             var itemCommitDate = json[i]["commit"]["author"]["date"].string
 
                             let inputDateFormatter = DateFormatter()
