@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -9,50 +10,50 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="CommitTableViewCell" customModule="Commit_History" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="79" id="KGk-i7-Jjw" customClass="CommitTableViewCell" customModule="Commit_History" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="github" translatesAutoresizingMaskIntoConstraints="NO" id="uMM-Te-tay">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="github" translatesAutoresizingMaskIntoConstraints="NO" id="uMM-Te-tay">
                         <rect key="frame" x="4" y="5" width="30" height="30"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="30" id="A0A-vR-rxQ"/>
-                            <constraint firstAttribute="height" constant="30" id="VAR-ku-zKt"/>
+                            <constraint firstAttribute="height" constant="30" id="EzJ-1d-EtC"/>
+                            <constraint firstAttribute="width" constant="30" id="lZk-Nh-u6c"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is a commit message" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pa2-U1-gFf">
-                        <rect key="frame" x="42" y="10" width="372" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is a commit message to the world  This is a commit message to the world" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pa2-U1-gFf" customClass="PaddingLabel" customModule="PaddingLabel">
+                        <rect key="frame" x="42" y="5" width="372" height="50"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="372" id="oPq-OR-wZJ"/>
-                            <constraint firstAttribute="height" constant="21" id="y1x-W1-eZD"/>
+                            <constraint firstAttribute="height" constant="50" id="Wy1-RT-rnA"/>
+                            <constraint firstAttribute="width" constant="372" id="ymc-B8-hz0"/>
                         </constraints>
-                        <fontDescription key="fontDescription" name="NotoSansMyanmar-Regular" family="Noto Sans Myanmar" pointSize="17"/>
+                        <fontDescription key="fontDescription" name="NotoSansMyanmar-Light" family="Noto Sans Myanmar" pointSize="16"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="topInset">
+                                <real key="value" value="0.0"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="22/02/07 " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="okX-Bt-j1g">
-                        <rect key="frame" x="276" y="26" width="134" height="21"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="21" id="QWy-x5-1pI"/>
-                            <constraint firstAttribute="width" constant="134" id="o7w-l6-DQm"/>
-                        </constraints>
+                        <rect key="frame" x="348.5" y="49" width="58.5" height="31"/>
                         <fontDescription key="fontDescription" name="NotoSansMyanmar-Regular" family="Noto Sans Myanmar" pointSize="14"/>
                         <color key="textColor" red="0.29405295850000002" green="0.33355444670000001" blue="0.37225496769999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="okX-Bt-j1g" secondAttribute="trailing" constant="4" id="8xb-Dw-fk5"/>
-                    <constraint firstAttribute="trailing" secondItem="pa2-U1-gFf" secondAttribute="trailing" id="RHA-TJ-nrr"/>
-                    <constraint firstItem="pa2-U1-gFf" firstAttribute="leading" secondItem="uMM-Te-tay" secondAttribute="trailing" constant="8" id="SJk-aQ-1fG"/>
-                    <constraint firstItem="uMM-Te-tay" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="cWb-Me-t87"/>
-                    <constraint firstItem="uMM-Te-tay" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="4" id="gAN-Fn-qvT"/>
-                    <constraint firstAttribute="bottom" secondItem="uMM-Te-tay" secondAttribute="bottom" constant="15" id="mQ6-Ku-OHe"/>
-                    <constraint firstAttribute="bottom" secondItem="okX-Bt-j1g" secondAttribute="bottom" constant="3" id="vpb-JH-39x"/>
-                    <constraint firstItem="pa2-U1-gFf" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="z83-bu-9wv"/>
+                    <constraint firstItem="uMM-Te-tay" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="NRw-kZ-FgH"/>
+                    <constraint firstAttribute="trailing" secondItem="okX-Bt-j1g" secondAttribute="trailing" constant="7" id="Ntn-s3-DCM"/>
+                    <constraint firstItem="pa2-U1-gFf" firstAttribute="leading" secondItem="uMM-Te-tay" secondAttribute="trailing" constant="8" id="UKT-mh-jXV"/>
+                    <constraint firstItem="pa2-U1-gFf" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="ZiN-qU-VRE"/>
+                    <constraint firstItem="uMM-Te-tay" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="4" id="bpW-s3-NVH"/>
+                    <constraint firstAttribute="bottom" secondItem="okX-Bt-j1g" secondAttribute="bottom" id="dgK-El-eJd"/>
+                    <constraint firstAttribute="trailing" secondItem="pa2-U1-gFf" secondAttribute="trailing" id="gyj-Cg-5Ti"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
@@ -60,7 +61,7 @@
                 <outlet property="commitDate" destination="okX-Bt-j1g" id="Oin-OE-bu3"/>
                 <outlet property="commitMessage" destination="pa2-U1-gFf" id="hg1-7j-DGT"/>
             </connections>
-            <point key="canvasLocation" x="137.68115942028987" y="144.64285714285714"/>
+            <point key="canvasLocation" x="137.68115942028987" y="154.35267857142856"/>
         </tableViewCell>
     </objects>
     <resources>

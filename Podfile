@@ -16,4 +16,7 @@ target 'Commit History' do
   #load json
   pod 'SwiftyJSON'
 
+  #text padding
+  pod 'PaddingLabel', '1.2'
+
 end

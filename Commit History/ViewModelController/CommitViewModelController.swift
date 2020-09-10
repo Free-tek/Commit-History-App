@@ -30,7 +30,15 @@ class CommitViewModelController {
                         for i in 0...25 {
                             
                             print(json[i])
-                            let itemCommitDate = json[i]["commit"]["author"]["date"].string
+                            var itemCommitDate = json[i]["commit"]["author"]["date"].string
+                            
+                            let inputDateFormatter = DateFormatter()
+                            inputDateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss'Z'"
+                            let date = inputDateFormatter.date(from: itemCommitDate!)
+
+                            let outputDateFormatter = DateFormatter()
+                            outputDateFormatter.dateFormat = "yyyy-dd-mm HH:mm"
+                            itemCommitDate = outputDateFormatter.string(from: date!)
                             
                             let itemCommitAuthor = json[i]["commit"]["author"]["name"].string
                             

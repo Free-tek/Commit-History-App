@@ -2,4 +2,5 @@ ${PODS_ROOT}/Target Support Files/Pods-Commit History/Pods-Commit History-framew
 ${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework
 ${BUILT_PRODUCTS_DIR}/BaseAPI/BaseAPI.framework
 ${BUILT_PRODUCTS_DIR}/GithubAPI/GithubAPI.framework
+${BUILT_PRODUCTS_DIR}/PaddingLabel/PaddingLabel.framework
 ${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework
