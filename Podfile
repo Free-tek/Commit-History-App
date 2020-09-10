@@ -12,5 +12,8 @@ target 'Commit History' do
 
   #connection requests
   pod 'Alamofire'
+ 
+  #load json
+  pod 'SwiftyJSON'
 
 end

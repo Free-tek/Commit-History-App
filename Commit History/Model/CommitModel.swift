@@ -1,5 +1,5 @@
 //
-//  CommitViewModel.swift
+//  CommitModel.swift
 //  Commit History
 //
 //  Created by Botosoft Technologies on 10/09/2020.
@@ -7,14 +7,14 @@
 //
 
 import Foundation
-struct CommitViewModel {
+struct CommitModel {
     let itemCommitMessage: String?
     let itemCommitDate: String?
 
 
-    init(commitItem: CommitModel) {
-        self.itemCommitMessage = commitItem.itemCommitMessage
-        self.itemCommitDate = commitItem.itemCommitDate
+    init(itemCommitMessage: String?, itemCommitDate: String?) {
+        self.itemCommitMessage = itemCommitMessage
+        self.itemCommitDate = itemCommitDate
     }
 
 }

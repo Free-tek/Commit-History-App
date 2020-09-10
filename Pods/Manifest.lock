@@ -3,22 +3,26 @@ PODS:
   - BaseAPI (0.1.7)
   - GithubAPI (0.0.6):
     - BaseAPI
+  - SwiftyJSON (5.0.0)
 
 DEPENDENCIES:
   - Alamofire
   - GithubAPI
+  - SwiftyJSON
 
 SPEC REPOS:
   trunk:
     - Alamofire
     - BaseAPI
     - GithubAPI
+    - SwiftyJSON
 
 SPEC CHECKSUMS:
   Alamofire: 814429acc853c6c54ff123fc3d2ef66803823ce0
   BaseAPI: 78f88151221ac5d2dcc2dda69cf3aab6773fd8eb
   GithubAPI: bc5bfd90489f5138a8d1e00003b18abe31579eb0
+  SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
 
-PODFILE CHECKSUM: 9c0d511c11cc40e5d27a2427285ed01a3c30acce
+PODFILE CHECKSUM: 662d899b4b41e9be005d40d4362e84da3cfede80
 
 COCOAPODS: 1.9.3
